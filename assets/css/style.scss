@@ -1,0 +1,467 @@
+$gray: #8E9AAF;
+$lavender: #CBC0D3;
+$pale: #EAC7CC;
+$white: #f6f6f6;
+$boldLavender : #7420b4;
+
+
+$pink: darken($pale, 20%);
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400|Lora');
+
+$sans-serif: 'Open Sans', sans-serif;
+$serif: 'Lora', serif;
+
+body {
+    // background: $lavender;
+    background-color: $boldLavender !important;
+}
+
+/* div box styling */
+.container {
+    margin: auto;
+    width: 650px;
+    height: 550px;
+    position: relative;
+}
+
+.welcome {
+    background: $white;
+    width: 650px;
+    height: 415px;
+    position: absolute;
+    top: 25%;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .1);
+}
+
+.pinkbox {
+    position: absolute;
+    top: -10%;
+    left: 5%;
+    background: $pale;
+    width: 320px;
+    height: 500px;
+    border-radius: 5px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, .1);
+    transition: all .5s ease-in-out;
+    z-index: 2;
+}
+
+.nodisplay {
+    display: none;
+    transition: all .5s ease;
+}
+
+.leftbox,
+.rightbox {
+    position: absolute;
+    width: 50%;
+    transition: 1s all ease;
+}
+
+.leftbox {
+    left: -2%;
+}
+
+.rightbox {
+    right: -2%;
+}
+
+/* font & button styling */
+h1 {
+    font-family: $sans-serif;
+    text-align: center;
+    margin-top: 95px;
+    text-transform: uppercase;
+    color: $white;
+    font-size: 2em;
+    letter-spacing: 8px;
+}
+
+.title {
+    font-family: $serif;
+    color: $gray;
+    font-size: 1.8em;
+    line-height: 1.1em;
+    letter-spacing: 3px;
+    text-align: center;
+    font-weight: 300;
+    margin-top: 20%;
+}
+
+.desc {
+    margin-top: -8px;
+}
+
+.account {
+    margin-top: 45%;
+    font-size: 10px;
+}
+
+p {
+    font-family: $sans-serif;
+    font-size: 1em;
+    letter-spacing: 2px;
+    color: #000;
+    // text-align: center;
+}
+
+span {
+    color: $pale;
+}
+
+.flower {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    top: 46%;
+    left: 29%;
+    opacity: .7;
+}
+
+.smaller {
+    width: 90px;
+    height: 100px;
+    top: 48%;
+    left: 38%;
+    opacity: .9;
+}
+
+button {
+    padding: 12px;
+    font-family: $sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 11px;
+    border-radius: 10px;
+    margin: auto;
+    outline: none;
+    display: block;
+
+    &:hover {
+        background: $pale;
+        color: $white;
+        transition: background-color 1s ease-out;
+    }
+}
+
+.button {
+    margin-top: 3%;
+    background: $white;
+    color: $pink;
+    border: solid 1px $pale;
+}
+
+/* form styling */
+
+form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 7px;
+}
+
+.more-padding {
+    padding-top: 35px;
+
+    input {
+        padding: 12px;
+    }
+
+    .submit {
+        margin-top: 45px;
+    }
+}
+
+.submit {
+    margin-top: 25px;
+    padding: 12px;
+    border-color: $pink;
+
+    &:hover {
+        background: $lavender;
+        border-color: darken($lavender, 5%);
+    }
+}
+
+input {
+    background: $pale;
+    width: 65%;
+    color: $pink;
+    border: none;
+    border-bottom: 1px solid rgba($white, 0.5);
+    padding: 9px;
+    margin: 7px;
+
+    &::placeholder {
+        color: rgba($white, 1);
+        letter-spacing: 2px;
+        font-size: 1.3em;
+        font-weight: 100;
+    }
+
+    &:focus {
+        color: $pink;
+        outline: none;
+        border-bottom: 1.2px solid rgba($pink, 0.7);
+        font-size: 1em;
+        transition: .8s all ease;
+
+        &::placeholder {
+            opacity: 0;
+        }
+    }
+}
+
+label {
+    font-family: $sans-serif;
+    color: $pink;
+    font-size: 0.8em;
+    letter-spacing: 1px;
+}
+
+.checkbox {
+    display: inline;
+    white-space: nowrap;
+    position: relative;
+    left: -62px;
+    top: 5px;
+}
+
+input[type=checkbox] {
+    width: 7px;
+    background: $pink;
+}
+
+.checkbox input[type="checkbox"]:checked+label {
+    color: $pink;
+    transition: .5s all ease;
+}
+
+.nav-custom {
+    background-color: $pale;
+    width: 80%;
+    margin: auto;
+    margin-top: 10px;
+    position: sticky;
+    border-radius: 51px;
+    top: 6px;
+}
+
+.custome-h {
+    height: 20px;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    position: relative;
+    max-width: 80px;
+}
+
+header ul {
+    position: relative;
+    display: flex;
+}
+
+header ul li {
+    list-style: none;
+}
+
+header ul li a {
+    display: inline-block;
+    color: #333;
+    font-weight: 650;
+    margin-left: 40px;
+    text-decoration: none;
+}
+
+.content {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content .textBox {
+    position: relative;
+    max-width: 600px;
+}
+
+.content .textBox h2 {
+    color: #000;
+    font-size: 4em;
+    line-height: 1.4em;
+    font-weight: 500;
+}
+
+.content .textBox h2 span {
+    color: $lavender;
+    font-size: 1.2em;
+    font-weight: 900;
+}
+
+.content.textBox p {
+    color: #000;
+}
+
+.content .textBox a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 20px;
+    background: $lavender;
+    color: #fff;
+    border-radius: 40px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.content .imageBox {
+    width: 600px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50px;
+    margin-top: 50px;
+}
+
+.content .imageBox img {
+    max-width: 100%;
+}
+
+.thumb {
+    position: absolute;
+    left: -385px;
+    bottom: 30px;
+    transform: translateX(170%);
+    display: flex;
+}
+
+.thumb li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+.thumb li:hover {
+    transform: translateY(-15px);
+}
+
+.thumb li img {
+    max-width: 120px;
+}
+
+.circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $lavender;
+    clip-path: circle(600px at right 700px);
+}
+
+.button-nav {
+    background-color: #EAC7CC !important;
+    /* width: 80%; */
+    margin: auto;
+    margin-top: 10px;
+    position: sticky;
+    border-radius: 136px !important;
+    top: 6px;
+    left: 0px;
+    height: 50px;
+    width: 80px !important;
+
+    a {
+        font-style: unset;
+        text-decoration: none;
+        color: $gray;
+    }
+}
+
+// mobile
+/* Ubah tampilan header untuk layar kecil */
+@media (max-width: 768px) {
+    header ul {
+        display: none !important;
+        flex-direction: column !important;
+        position: absolute !important;
+        background: #fff !important;
+        top: 60px !important;
+        left: 0 !important;
+        width: 100% !important;
+    }
+
+    header ul.show {
+        display: flex !important;
+    }
+
+    header ul li {
+        margin: 0 !important;
+        padding: 10px !important;
+    }
+}
+
+/* Ubah tampilan content untuk layar kecil */
+@media (max-width: 768px) {
+    section {
+        padding: 20px !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+    }
+
+    .content .textBox h2 {
+        font-size: 2em !important;
+        line-height: 1.2em !important;
+    }
+
+    .content .imageBox {
+        width: 100% !important;
+        justify-content: center !important;
+        padding: 0 !important;
+        margin-top: 20px !important;
+    }
+
+    .content .imageBox img {
+        max-width: 100% !important;
+    }
+}
+
+/* Ubah tampilan thumbnail untuk layar kecil */
+@media (max-width: 768px) {
+    .thumb {
+        transform: translateX(0) !important;
+        left: 0 !important;
+        bottom: 0 !important;
+        width: 100% !important;
+        justify-content: center !important;
+    }
+
+    .thumb li {
+        margin: 0 10px !important;
+    }
+}
